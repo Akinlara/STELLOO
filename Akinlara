@@ -1,0 +1,81 @@
+// UI/UX Design code for Service Provider Onboarding in STELLOO
+
+// Import UI design libraries and frameworks
+import React from "react";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
+
+// Define color scheme and typography for consistency
+const mainColor = "#4287f5";
+const secondaryColor = "#e5e5e5";
+const typography = { fontFamily: "Open Sans, sans-serif" };
+
+// Create the overall look and feel of the form
+const ServiceProviderOnboarding = () => {
+  return (
+    <Container style={{ padding: "2em" }}>
+      <Row>
+        <Col xs={12}>
+          <h2 style={{ ...typography, color: mainColor }}>
+            Service Provider Onboarding
+          </h2>
+        </Col>
+      </Row>
+      <Row>
+        <Col xs={12}>
+          <Form>
+            {/* Fields for service provider details */}
+            <Form.Group controlId="formServices">
+              <Form.Label style={typography}>Services</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Enter details of your services"
+                style={typography}
+              />
+            </Form.Group>
+            <Form.Group controlId="formPricing">
+              <Form.Label style={typography}>Pricing</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Enter your pricing details"
+                style={typography}
+              />
+            </Form.Group>
+            <Form.Group controlId="formReturnPolicy">
+              <Form.Label style={typography}>Return Policy</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Enter your return policy details"
+                style={typography}
+              />
+            </Form.Group>
+
+            {/* Feedback form for clients and Vendors */}
+            <Form.Group controlId="formFeedback">
+              <Form.Label style={typography}>Feedback</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Enter feedback form details"
+                style={typography}
+              />
+            </Form.Group>
+
+            {/* Submit button */}
+            <Button
+              variant="primary"
+              type="submit"
+              style={{
+                backgroundColor: mainColor,
+                borderColor: mainColor,
+                ...typography,
+              }}
+            >
+              Submit
+            </Button>
+          </Form>
+        </Col>
+      </Row>
+    </Container>
+  );
+};
+
+export default ServiceProviderOnboarding;
